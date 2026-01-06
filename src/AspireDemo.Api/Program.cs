@@ -27,7 +27,9 @@ var summaries = new[]
     "Scorching",
 };
 
-app.MapGet(
+var group = app.MapGroup("api");
+group
+    .MapGet(
         "/weatherforecast",
         () =>
         {

@@ -20,6 +20,10 @@ var api = builder
         );
     });
 
-var frontend = builder.AddViteApp("frontend", "../AspireDemo.Frontend").WithEndpoint("http", e => e.Port = 5173);
+var frontend = builder
+    .AddViteApp("frontend", "../AspireDemo.Frontend")
+    .WithEndpoint("http", e => e.Port = 5173)
+    .WithReference(api)
+    .WithUrl("", "Aspire Demo");
 
 builder.Build().Run();
