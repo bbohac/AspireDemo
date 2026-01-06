@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="LICENSE" />
+    <File Path="README.md" />
+  </Folder>
+  <Project Path="src/AspireDemo.Api/AspireDemo.Api.csproj" Id="36c5814b-be2a-41eb-b13b-a2e610f79151" />
+  <Project Path="src/AspireDemo.AppHost/AspireDemo.AppHost.csproj" Id="953a70c6-ba82-4eb2-bff9-ae6d435518fe" />
+</Solution>

@@ -1,0 +1,78 @@
+############################
+# .NET / Aspire
+############################
+
+# Build output
+bin/
+obj/
+
+# Aspire runtime artifacts
+.aspire/
+**/.aspire/
+
+# User-specific files
+*.user
+*.suo
+
+# Logs
+*.log
+
+############################
+# Node / Vite / Frontend
+############################
+
+# Dependencies
+node_modules/
+
+# Vite build output
+dist/
+build/
+
+# Local environment files
+.env
+.env.local
+.env.*.local
+
+# Editor temp files
+*.tsbuildinfo
+
+############################
+# Visual Studio
+############################
+
+.vs/
+*.vcxproj.user
+*.vscode/
+
+# Backup files
+*.bak
+*.orig
+
+############################
+# Visual Studio Code
+############################
+
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+############################
+# OS-specific
+############################
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
+
+############################
+# Docker
+############################
+
+# Local Docker artifacts
+docker-compose.override.yml
+docker-data/
