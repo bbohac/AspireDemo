@@ -1,8 +1,8 @@
 import "./App.css";
-import { useWeather } from "./hooks/useWeather";
+import { useForecast } from "./hooks/useForecast";
 
 function App() {
-  const { data, loading } = useWeather();
+  const { data, loading } = useForecast();
 
   if (loading) {
     return <p>Loading...</p>;

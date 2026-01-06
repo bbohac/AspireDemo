@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
-import { getWeather } from "../api/weather";
+import { getForecast } from "../api/forecast";
 import type { WeatherForecast } from "../models/WeatherForecast";
 
-export function useWeather() {
+export function useForecast() {
   const [data, setData] = useState<WeatherForecast[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    getWeather()
+    getForecast()
       .then(setData)
       .finally(() => setLoading(false));
   }, []);
