@@ -2,6 +2,8 @@ var builder = DistributedApplication.CreateBuilder(args);
 
 var postgres = builder.AddPostgres("postgres").WithDataVolume();
 
+var redis = builder.AddRedis("redis").WithDataVolume();
+
 var api = builder
     .AddProject<Projects.AspireDemo_Api>("api")
     .WithExternalHttpEndpoints()
@@ -22,7 +24,9 @@ var api = builder
         );
     })
     .WithReference(postgres)
-    .WaitFor(postgres);
+    .WaitFor(postgres)
+    .WithReference(redis)
+    .WaitFor(redis);
 
 var frontend = builder
     .AddViteApp("frontend", "../AspireDemo.Frontend")

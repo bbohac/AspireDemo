@@ -24,7 +24,23 @@ builder
         options.SubstituteApiVersionInUrl = true;
     });
 
+builder.AddRedisClient("redis");
+builder.Services.AddStackExchangeRedisCache(options =>
+    options.Configuration = builder.Configuration.GetConnectionString("redis")
+);
+
 builder.Services.AddScoped<IForecastService, ForecastService>();
+builder.Services.Decorate<IForecastService, ForecastCachingDecorator>();
+
+//builder.Services.AddScoped<ForecastService>();
+//builder.Services.AddScoped<IForecastService>(sp =>
+//{
+//    var inner = sp.GetRequiredService<ForecastService>();
+//    var cache = sp.GetRequiredService<IDistributedCache>();
+
+//    return new ForecastCachingDecorator(inner, cache);
+//});
+
 builder.Services.AddScoped<IForecastHistoryService, ForecastHistoryService>();
 builder.Services.AddValidatorsFromAssemblyContaining<ForecastRequestValidator>();
 

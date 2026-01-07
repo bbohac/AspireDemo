@@ -1,6 +1,5 @@
 using AspireDemo.Api.Api.Filters;
 using AspireDemo.Application.Forecast;
-using AspireDemo.Application.ForecastHistory;
 using FluentValidation;
 
 namespace AspireDemo.Api.Api.Weather;
@@ -15,13 +14,10 @@ public static class WeatherEndpoints
                 async (
                     [AsParameters] ForecastRequestDto request,
                     IValidator<ForecastRequestDto> validator,
-                    IForecastService forecastService,
-                    IForecastHistoryService forcastHistoryService
+                    IForecastService forecastService
                 ) =>
                 {
-                    await forcastHistoryService.AddAsync(request.Days);
-
-                    var forecast = forecastService.GetForecast(request.Days);
+                    var forecast = await forecastService.GetForecastAsync(request.Days);
                     return Results.Ok(forecast.Select(x => x.ToDto()));
                 }
             )

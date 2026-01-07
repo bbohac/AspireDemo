@@ -2,5 +2,5 @@ namespace AspireDemo.Application.Forecast;
 
 public interface IForecastService
 {
-    public IEnumerable<Domain.Forecast.Forecast> GetForecast(int days);
+    public Task<IEnumerable<Domain.Forecast.Forecast>> GetForecastAsync(int days);
 }
