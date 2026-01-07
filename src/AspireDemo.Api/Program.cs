@@ -4,11 +4,14 @@ using AspireDemo.Api.Api.Weather;
 using AspireDemo.Application.Forecast;
 using AspireDemo.Application.ForecastHistory;
 using AspireDemo.Infrastructure.Persistence;
+using AspireDemo.ServiceDefaults;
 using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.AddServiceDefaults();
+
 builder
     .Services.AddOpenApi()
     .AddProblemDetails()

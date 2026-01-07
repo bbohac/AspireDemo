@@ -21,6 +21,7 @@
   <ItemGroup>
     <ProjectReference Include="..\AspireDemo.Application\AspireDemo.Application.csproj" />
     <ProjectReference Include="..\AspireDemo.Domain\AspireDemo.Domain.csproj" />
+    <ProjectReference Include="..\AspireDemo.ServiceDefaults\AspireDemo.ServiceDefaults.csproj" />
   </ItemGroup>
 
 </Project>

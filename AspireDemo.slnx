@@ -8,4 +8,5 @@
   <Project Path="src/AspireDemo.Application/AspireDemo.Application.csproj" Id="9d5bc1a4-449c-46ac-968d-a3c946baa96d" />
   <Project Path="src/AspireDemo.Domain/AspireDemo.Domain.csproj" Id="2d7ef732-9716-4937-864f-977561e411ce" />
   <Project Path="src/AspireDemo.Infrastructure/AspireDemo.Infrastructure.csproj" Id="e27fdd79-8545-47ab-a3fc-639e9692523e" />
+  <Project Path="src/AspireDemo.ServiceDefaults/AspireDemo.ServiceDefaults.csproj" Id="0e7593e3-dfd3-43d8-b1e6-de4e5b1639eb" />
 </Solution>
