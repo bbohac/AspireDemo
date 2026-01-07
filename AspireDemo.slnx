@@ -5,4 +5,7 @@
   </Folder>
   <Project Path="src/AspireDemo.Api/AspireDemo.Api.csproj" Id="36c5814b-be2a-41eb-b13b-a2e610f79151" />
   <Project Path="src/AspireDemo.AppHost/AspireDemo.AppHost.csproj" Id="953a70c6-ba82-4eb2-bff9-ae6d435518fe" />
+  <Project Path="src/AspireDemo.Application/AspireDemo.Application.csproj" Id="9d5bc1a4-449c-46ac-968d-a3c946baa96d" />
+  <Project Path="src/AspireDemo.Domain/AspireDemo.Domain.csproj" Id="2d7ef732-9716-4937-864f-977561e411ce" />
+  <Project Path="src/AspireDemo.Infrastructure/AspireDemo.Infrastructure.csproj" Id="e27fdd79-8545-47ab-a3fc-639e9692523e" />
 </Solution>

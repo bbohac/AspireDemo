@@ -1,3 +1,4 @@
+using AspireDemo.Api.Api.ForecastHistory;
 using AspireDemo.Api.Api.Weather;
 
 namespace AspireDemo.Api.Api;
@@ -8,7 +9,9 @@ public static class ApiExtensions
     {
         var api = app.MapGroup("/api");
         var version1 = api.MapGroup("/v1").WithApiVersionSet(ApiVersions.Version1(app)).HasApiVersion(1);
+
         version1.MapWeatherEndpoints();
+        version1.MapForecastHistoryEndpoints();
 
         return app;
     }

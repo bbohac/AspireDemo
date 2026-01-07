@@ -1,5 +1,7 @@
 var builder = DistributedApplication.CreateBuilder(args);
 
+var postgres = builder.AddPostgres("postgres").WithDataVolume();
+
 var api = builder
     .AddProject<Projects.AspireDemo_Api>("api")
     .WithExternalHttpEndpoints()
@@ -18,12 +20,15 @@ var api = builder
                 Endpoint = context.GetEndpoint("https"),
             }
         );
-    });
+    })
+    .WithReference(postgres)
+    .WaitFor(postgres);
 
 var frontend = builder
     .AddViteApp("frontend", "../AspireDemo.Frontend")
     .WithEndpoint("http", e => e.Port = 5173)
+    .WithUrl("", "Aspire Demo")
     .WithReference(api)
-    .WithUrl("", "Aspire Demo");
+    .WaitFor(api);
 
 builder.Build().Run();
