@@ -1,11 +1,9 @@
-using AspireDemo.Api.Domain.Forecasts;
-
-namespace AspireDemo.Api.Application.Weather;
+namespace AspireDemo.Application.Forecast;
 
 public sealed class ForecastService : IForecastService
 {
     private static readonly string[] Summaries =
-    {
+    [
         "Freezing",
         "Bracing",
         "Chilly",
@@ -16,12 +14,12 @@ public sealed class ForecastService : IForecastService
         "Hot",
         "Sweltering",
         "Scorching",
-    };
+    ];
 
-    public IEnumerable<Forecast> GetForecast(int days) =>
+    public IEnumerable<Domain.Forecast.Forecast> GetForecast(int days) =>
         Enumerable
             .Range(1, days)
-            .Select(index => new Forecast(
+            .Select(index => new Domain.Forecast.Forecast(
                 DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
                 Random.Shared.Next(-20, 55),
                 Summaries[Random.Shared.Next(Summaries.Length)]

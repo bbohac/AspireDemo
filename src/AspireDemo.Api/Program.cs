@@ -1,7 +1,7 @@
 using Asp.Versioning;
 using AspireDemo.Api.Api;
 using AspireDemo.Api.Api.Weather;
-using AspireDemo.Api.Application.Weather;
+using AspireDemo.Application.Forecast;
 using AspireDemo.Application.ForecastHistory;
 using AspireDemo.Infrastructure.Persistence;
 using FluentValidation;

@@ -1,5 +1,5 @@
 using AspireDemo.Api.Api.Filters;
-using AspireDemo.Api.Application.Weather;
+using AspireDemo.Application.Forecast;
 using AspireDemo.Application.ForecastHistory;
 using FluentValidation;
 

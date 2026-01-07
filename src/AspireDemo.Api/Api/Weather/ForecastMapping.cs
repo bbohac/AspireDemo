@@ -1,4 +1,4 @@
-using AspireDemo.Api.Domain.Forecasts;
+using AspireDemo.Domain.Forecast;
 
 namespace AspireDemo.Api.Api.Weather;
 

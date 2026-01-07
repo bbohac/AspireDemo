@@ -1,4 +1,4 @@
-namespace AspireDemo.Api.Domain.Forecasts;
+namespace AspireDemo.Domain.Forecast;
 
 public sealed record Forecast(DateOnly Date, int TemperatureC, string? Summary)
 {
